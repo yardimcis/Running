@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<OutputSpeed Description="Speed Range Size">
+		<NumberOfElements>3</NumberOfElements>		
+		<Speed1>100</Speed1>		
+		<Speed2>50</Speed2>
+		<Speed3>10</Speed3>		
+		<Speed4>5</Speed4>		
+	</OutputSpeed>
+	<FrameQueue>
+		<MaxNumberOfElements Description="Maximum number of elements in messaqe queue">20</MaxNumberOfElements>
+		<ElementSize Description="Size of a single element in message queue">5000</ElementSize>
+	</FrameQueue>
+</Root>

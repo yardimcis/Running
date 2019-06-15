@@ -1,0 +1,41 @@
+<Root>
+	<Device>
+		<HardwareVersion>4.0.2</HardwareVersion>
+		<VCount3G>off</VCount3G>
+	</Device>
+	<BootArgs>
+		<Application>/opt/fw_setenv</Application>
+		<EnvironmentCommand>bootargs</EnvironmentCommand>
+		<VideoParameters> 
+			<video>davincifb</video>
+			<vid0>0,2500K</vid0>
+			<vid1>0,2500K</vid1>
+			<osd0>720x576x16,2025K</osd0>
+			<davinci_enc_mngr_ch0_output>COMPOSITE</davinci_enc_mngr_ch0_output>
+			<davinci_enc_mngr_ch0_mode>pal</davinci_enc_mngr_ch0_mode>
+		</VideoParameters>
+		<ConsoleSelection>ttyS0,115200n8</ConsoleSelection>
+		<InitialRamDisk>noinitrd</InitialRamDisk>
+		<Permissions>rw</Permissions>
+		<DefaultNetworkParams>
+			<IP>192.168.1.241</IP>
+			<Gateway>192.168.1.1</Gateway>
+			<Netmask>255.255.255.0</Netmask>
+			<MacType Description="1 for change ip at reboot, 0 for do not change">0</MacType>
+			<Mac Description="Unique for every device">02:42:80:5e:63:5f</Mac>
+		</DefaultNetworkParams>
+		<Root Description="/dev/hda* or /dev/nfs">
+			<rootfsType>yaffs2</rootfsType>
+			<Device>/dev/mtdblock5</Device>
+			<NFSroot>/home/kade/workdir/ruiva-dm6446-dvsdk2-v2/ruiva-dm6446-dvsdk2-rel/workdir/filesys</NFSroot>
+		</Root>
+		<System>
+			<Permissions>nolock</Permissions>
+			<Memory>118M</Memory>
+		</System>		
+	</BootArgs>
+	<Peripherals>
+		<WiFiDataDongle>wlan0</WiFiDataDongle>
+		<WiFiMonitorDongle>wlan1</WiFiMonitorDongle>
+	</Peripherals>
+</Root>

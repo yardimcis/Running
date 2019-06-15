@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-9" ?>
+<Root>
+	<Image>
+		<BasePath>../ResultImages</BasePath>
+	</Image>
+	<RecordTime>
+		<Day>
+			<Hour>08</Hour>
+			<Minute>00</Minute>
+		</Day>
+		<Night>
+			<Hour>20</Hour>
+			<Minute>08</Minute>
+		</Night>
+	</RecordTime>
+</Root>

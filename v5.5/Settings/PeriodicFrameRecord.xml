@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>    
+	<IsActive Name="Resim Kayıt Aktif" Name_en="Activate Frame Record" Description="Aktif olması için 1, deaktif olması için 0 yazınız" validate="required: true, number: true, range: [0,1]">0</IsActive>
+    <DayTime>
+        <RecordTime>
+            <Hour Name="Gündüz Kayıt Saati" Name_en="Daytime Record Hour" validate="required: true, number: true, range: [0,23]">10</Hour>
+            <Minute Name="Gündüz Kayıt Dakikası" Name_en="Daytime Record Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+        </RecordTime>
+		<RecordInterval Name="Gündüz Kayıt Süre Aralığı" Name_en="Daytime Record Time Interval" Description="Gerçek kayıtın verilen kayıt zamanına göre kaç dakika kayabileceğini belirler" validate="required: true, number: true, range: [1,60]">5</RecordInterval>
+		<ParentPath Name="Gündüz Kayıt Klasörü" Name_en="Daytime Record Folder" Description="Gündüz görüntülerinin kaydedileceği klasör">../Frames/Day</ParentPath>
+    </DayTime>
+	<NightTime>
+        <RecordTime>
+            <Hour Name="Gece Kayıt Saati" Name_en="Night Record Hour" validate="required: true, number: true, range: [0,23]">20</Hour>
+            <Minute Name="Gece Kayıt Dakikası" Name_en="Night Record Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+        </RecordTime>
+		<RecordInterval Name="Gece Kayıt Süre Aralığı" Name_en="Night Record Hour Time Interval" Description="Gerçek kayıtın verilen kayıt zamanına göre kaç dakika kayabileceğini belirler" validate="required: true, number: true, range: [5,60]">15</RecordInterval>
+		<ParentPath Name="Gece Kayıt Klasörü" Name_en="Night Record Folder" Description="Gece görüntülerinin kaydedileceği klasör">../Frames/Night</ParentPath>
+    </NightTime>
+</Root>

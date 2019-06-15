@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="ISO-8859-9" ?>
+<Root>
+	<MaxRecordTime>10</MaxRecordTime>
+	<IsRecordActvice>0</IsRecordActvice>
+	<Annotations>
+		<Wires>0</Wires>
+		<Track>0</Track>
+		<Result>0</Result>
+		<Fps>0</Fps>
+		<Foreground>0</Foreground>
+		<Shadow>0</Shadow>
+		<Mask>0</Mask>
+		<Color>0</Color>
+		<Child>0</Child>
+	</Annotations>
+</Root>

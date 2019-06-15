@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+    <Network>
+        <Sender>
+            <Port Description="Sunucuya gönderilecek verilerin yollandığı port numarası" validate="required: true, number: true, range: [10000,48000]">12223</Port>
+            <DifferentServer Description="Engineden farklı bir IP adresinden zaman alınacak ise 1 aynı server ise 0" validate="required: true, number:true, range: [0,1]">0</DifferentServer>
+            <IP Description="Uzak sunucunu IPsi-Engine Uzerinden okunacaktir." validate="required: true, ipv4: true">192.168.1.2</IP>
+        </Sender>
+    </Network>
+    <DateTime>
+        <ChangeTimeZone Description="timezone dikkate alinarak zaman ayarlanacak ise 1, kullanilmayacak ise 0 olacak">1</ChangeTimeZone>
+        <ServerTimeZone Description="date_time_zonespec.csv dosyasi icerisinden alincak tagler yazilacaktir. Bu tag TimeSyncServer'in aldigi tarihin zone'u olacaktir.">Asia/Istanbul</ServerTimeZone>
+        <TimeZone Description="date_time_zonespec.csv dosyasi icerisinden alincak tagler yazilacaktir. Asia/Dubai gibi">Asia/Istanbul</TimeZone>
+    </DateTime>
+    <NTP>
+        <Usage Description="sistemde ntpd kosması durumunda 1 ntpd calısmaması durumunda 0" validate="required: true, number:true, range[0,1]">0</Usage>
+    </NTP>
+    <Sync>
+        <Period Description="Zaman senkronizasyonun saglanacagi periyot" validate="required: true, number: true, range: [1,60]">15</Period>
+    </Sync>
+</Root>

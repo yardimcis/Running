@@ -1,0 +1,39 @@
+<Root>
+    <Network>
+        <IsActive Description="TCP/IP uzak servera veri gondermenin aktif olmasi icin 1, kapatmak icin 0">0</IsActive>
+        <Sender>
+            <IP Description="Uzak sunucunu IPsi" validate="required: true, ipv4: true">54.154.163.83</IP>
+            <Port Description="Sunucuya g&#246;nderilecek verilerin yolland&#305;&#287;&#305; port numaras&#305;" validate="required: true, number: true, range: [10000,48000]">12100</Port>
+            <CustomerID Description="M&#252;&#351;teri numaras&#305;" validate="required: true, rangelength: [1,6]">254A75</CustomerID>
+            <DeviceID Description="Cihaz numaras&#305;" validate="required: true, rangelength: [1,6]">285070</DeviceID>
+        </Sender>
+        <Listener>
+            <Port Description="Sunucadan gelecek cevaplar&#305;n dinlecece&#287;i port numaras&#305;" validate="required: true, number: true, range: [10000,48000]">12101</Port>
+        </Listener>
+        <VideoRecord>
+            <SenderIp Description="Video kaydedilecek server ipsi">192.168.1.20</SenderIp>
+            <SenderPort Description="Sunucuya g&#246;nderilecek verilerin yolland&#305;&#287;&#305; port numaras&#305;" validate="required: true, number: true, range: [10000,48000]">12106</SenderPort>
+            <ReceiverPort Description="Sunucadan gelecek cevaplar&#305;n dinlecece&#287;i port numaras&#305;" validate="required: true, number: true, range: [10000,48000]">12107</ReceiverPort>
+        </VideoRecord>
+        <Data>
+            <SendImage Description="Resim Bilgisi G&#246;nder">false</SendImage>
+            <SendACK Description="DataServer 0 i&#231;in ACK g&#246;ndermez, 1 i&#231;in g&#246;nderir" validate="required: true, number: true, range: [0,2]">2</SendACK>
+            <CountingPeriod Description="Dakika cinsinde veri kaydedilecek zaman araligini gosterir.">10</CountingPeriod>
+            <InstantCountingPeriod Description="Saniye cinsinde veri g&#246;nderilecek anl&#305;k zaman araligini gosterir. 0==&gt;DISABLED">0</InstantCountingPeriod>
+            <InstantCountingActive />
+        </Data>
+        <PublicIP>--</PublicIP>
+        <ActivateSerialID Description="SerialID kullanmak icin 1 ilk sistem DeviceID, CustomerID kullanmak icin 0">1</ActivateSerialID>
+    </Network>
+    <MQTT>
+        <IsActive Description="MQTT uzak servera veri gondermenin aktif olmasi icin 1, kapatmak icin 0">1</IsActive>
+        <ServerURI>85.111.53.134:1883</ServerURI>
+        <Username>_key_535199912233292681</Username>
+        <Password>3f5aa9fe100d4e2282acbae9492ab78b</Password>
+        <QoS>2</QoS>
+    </MQTT>
+    <radio_sender>otherip</radio_sender>
+    <radio_serial>on</radio_serial>
+    <radio_mqtt>on</radio_mqtt>
+    <radio_tcp>otherip</radio_tcp>
+</Root>

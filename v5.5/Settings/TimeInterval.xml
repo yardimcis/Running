@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+    <AutoDetect>0</AutoDetect>
+    <AutoDetectControl>0</AutoDetectControl>
+    <LastMean>0</LastMean>
+    <LearningDataCount>12</LearningDataCount>
+    <isSystemAvailableForMQTTParameterChange>1</isSystemAvailableForMQTTParameterChange>
+    <Monday>
+        <NumberOfTimeIntervals validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="Başlangıç Saati" Name_en="Start Hour" validate="required: true, number: true, range: [0,23]">08:00</Hour>
+                <Minute Name="Başlangıç Dakikası" Name_en="Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="Bitiş Saati" Name_en="End Hour" validate="required: true, number: true, range: [0,23]">22:00</Hour>
+                <Minute Name="Bitiş Dakikası" Name_en="End Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </EndTime>
+        </TimeInterval1>
+    </Monday>
+    <Tuesday>
+        <NumberOfTimeIntervals validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="Başlangıç Saati" Name_en="Start Hour" validate="required: true, number: true, range: [0,23]">08:00</Hour>
+                <Minute Name="Başlangıç Dakikası" Name_en="Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="Bitiş Saati" Name_en="End Hour" validate="required: true, number: true, range: [0,23]">22:00</Hour>
+                <Minute Name="Bitiş Dakikası" Name_en="End Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </EndTime>
+        </TimeInterval1>
+    </Tuesday>
+    <Wednesday>
+        <NumberOfTimeIntervals validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="Başlangıç Saati" Name_en="Start Hour" validate="required: true, number: true, range: [0,23]">08:00</Hour>
+                <Minute Name="Başlangıç Dakikası" Name_en="Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="Bitiş Saati" Name_en="End Hour" validate="required: true, number: true, range: [0,23]">22:00</Hour>
+                <Minute Name="Bitiş Dakikası" Name_en="End Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </EndTime>
+        </TimeInterval1>
+    </Wednesday>
+    <Thursday>
+        <NumberOfTimeIntervals validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="Başlangıç Saati" Name_en="Start Hour" validate="required: true, number: true, range: [0,23]">08:00</Hour>
+                <Minute Name="Başlangıç Dakikası" Name_en="Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="Bitiş Saati" Name_en="End Hour" validate="required: true, number: true, range: [0,23]">22:00</Hour>
+                <Minute Name="Bitiş Dakikası" Name_en="End Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </EndTime>
+        </TimeInterval1>
+    </Thursday>
+    <Friday>
+        <NumberOfTimeIntervals validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="Başlangıç Saati" Name_en="Start Hour" validate="required: true, number: true, range: [0,23]">08:00</Hour>
+                <Minute Name="Başlangıç Dakikası" Name_en="Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="Bitiş Saati" Name_en="End Hour" validate="required: true, number: true, range: [0,23]">22:00</Hour>
+                <Minute Name="Bitiş Dakikası" Name_en="End Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </EndTime>
+        </TimeInterval1>
+    </Friday>
+    <Saturday>
+        <NumberOfTimeIntervals validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="Başlangıç Saati" Name_en="Start Hour" validate="required: true, number: true, range: [0,23]">08:00</Hour>
+                <Minute Name="Başlangıç Dakikası" Name_en="Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="Bitiş Saati" Name_en="End Hour" validate="required: true, number: true, range: [0,23]">22:00</Hour>
+                <Minute Name="Bitiş Dakikası" Name_en="End Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </EndTime>
+        </TimeInterval1>
+    </Saturday>
+    <Sunday>
+        <NumberOfTimeIntervals validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="Başlangıç Saati" Name_en="Start Hour" validate="required: true, number: true, range: [0,23]">08:00</Hour>
+                <Minute Name="Başlangıç Dakikası" Name_en="Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="Bitiş Saati" Name_en="End Hour" validate="required: true, number: true, range: [0,23]">22:00</Hour>
+                <Minute Name="Bitiş Dakikası" Name_en="End Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </EndTime>
+        </TimeInterval1>
+    </Sunday>
+</Root>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<HTTP>
+		<Port Name="HTTP Port" Name_en="HTTP Port" Description="Web sunucusunun HTTP istekleri için dinlediği port numarası" validate="required: true, number: true, range: [1,48000]">12102</Port>
+	</HTTP>
+	<HTTPS>
+		<Port Name="HTTPS Port" Name_en="HTTPS Port" Description="Web sunucusunun HTTPS istekleri için dinlediği port numarası" validate="required: true, number: true, range: [1,48000]">12103</Port>
+	</HTTPS>
+	<USERS>
+		<Admin Name="Root Kullanıcı" Name_en="Root Username">sadmin</Admin>
+		<Adminpass Name="Root Şifre" Name_en="Root Password">qwxc56nm</Adminpass>
+		<Root Name="Root Kullanıcı" Name_en="Root Username">admin</Root>
+		<Rootpass Name="Root Şifre" Name_en="Root Password">qw34qw34</Rootpass>
+		<Middle Name="Orta Kullanıcı" Name_en="Middle Level Username">root</Middle>
+		<Middlepass Name="Orta Şifre" Name_en="Middle Level Password">123</Middlepass>
+		<Low Name="Düşük Kullanıcı" Name_en="Low Level Username">user</Low>
+		<Lowpass Name="Düşük Şifre" Name_en="Low Level Password">11</Lowpass>
+	</USERS>
+	<IsFirstUse Description="Değeri 1 ise cihaz ilk açıldığında kullanıcı yaratmayı teklif eder">0</IsFirstUse>
+</Root>

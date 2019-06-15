@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>    
+    <Synchronization>
+        <Interval Name="Kontrol Aralığı" Name_en="Control Interval" Description="Sunucu ile sonuç senkronizasyonu yapmak sıklığı, dakika cinsinden" validate="required: true, number: true, range: [30,300]">30</Interval>
+        <OldResults>
+			<Remove Name="Eski Kayıtları Sil" Name_en="Delete Former Records" Description="Eski sonuç değerlerini saklanıp saklanmayacağına karar verir">0</Remove>
+			<NumberOfDays Name="Eski Kayıtların Saklanma Süresi" Name_en="Maximum Record Validity Time" Description="Eski sonuç değerlerini saklanma süresi, gün cinsinden" validate="required: true, number: true, range: [1,90]">30</NumberOfDays>
+		</OldResults>
+    </Synchronization>
+	<FTPSynchronization>
+		<IsActive Description="FTP veri gondermenin aktif olmasi icin 1, kapatmak icin 0">0</IsActive>
+		<Host Name="Sunucu" Name_en="Host" Description="Sonuclarin yazilacagi ftp server adresi">192.168.1.22</Host>
+		<Username Name="Kullanici Adi" Name_en="Host Name" Description="Sonuclarin yazilacagi ftp server kullanici adi">vcount</Username>
+		<Password Name="Parola" Name_en="Password" Description="Sonuclarin yazilacagi ftp server sifresi">vcount</Password>
+		<Port Name="Port" Name_en="Port" Description="Sonuclarin yazilacagi ftp server portu">21</Port>
+		<ServerMode Name="Server Mode" Name_en="Server Mode" Description="Sonuclarin yazilacagi ftp server modu 0=>PASV 1=>ACT">0</ServerMode>
+		<ActiveModePort Name="Active Mode Port" Name_en="Active Mode Port" Description="Active mode kullanilacagi zaman acilacak 2. port">50000</ActiveModePort>
+		<Interval Name="Veri Gonderme Aralığı" Name_en="Send Interval" Description="Sonuclarin yazilacagi sıklık, dakika cinsinden">120</Interval>
+		<FileFormat Name="Veri Tipi" Name_en="Data Type" Description="FTP ye yazilacak dosya formati 0=>XML 1=>JSON">0</FileFormat>
+	</FTPSynchronization>
+</Root>

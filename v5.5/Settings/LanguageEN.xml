@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<Tcp>Network Settings</Tcp>
+	<Log>Logs</Log>
+	<Live>Live Stream</Live>
+	<Count>Results</Count>
+	<FrameRecord>Daily Frame Records</FrameRecord>
+	<Save>Download Configuration</Save>
+	<Upload>Upload Configuration</Upload>
+	<ResetDSP>Reset Image Processing</ResetDSP>
+	<Restart>Reset Application</Restart>
+	<Reboot>Reboot</Reboot>
+	<Kick>End Other Sessions</Kick>
+	<AllowUser>Unlock Login</AllowUser>
+	<NotAllowUser>Lock Login</NotAllowUser>
+	<Logout>Logout</Logout>
+	<TripWire>Incoming-Outgoing Wires</TripWire>
+	<Mask>Image Masking</Mask>
+	<ROI>Counting Region</ROI>
+	<VideoRecord>Video Record</VideoRecord>
+	<Parameter>
+		<Network>Remote Server</Network>
+		<ImageProcess>Image Processing</ImageProcess>
+		<WorkTime>Working Interval</WorkTime>
+		<WebServer>Web Server</WebServer>
+		<FrameRec>Daily Frame Record</FrameRec>
+		<Sync>Result Synchronization</Sync>
+		<LiveStream>Live Stream</LiveStream>
+		<TimeZone>Time Zone</TimeZone>
+		<Raspicam>Camera Settings</Raspicam>
+	</Parameter>
+	<In>In:</In>
+	<Out>Out:</Out>
+	<InChild>In_C:</InChild>
+	<OutChild>Out_C:</OutChild>
+	<NoAccess>YOU HAVE NO ACCESS TO THIS PAGE.\r\n</NoAccess>
+	<Blocked>YOUR ACCESS HAS BEEN BLOCKED BY ADMIN TEMPORARYLY\r\n</Blocked>
+	<SessionEnd>YOUR SESSION HAS BEEN TIMED OUT</SessionEnd>
+	<BackToLogin>Back</BackToLogin>
+	<WrongPass>Wrong Username and/or Password!</WrongPass>
+	<UploadHtml>FileUpload_en.html</UploadHtml>
+	<TcpHtml>TcpSettings_en.html</TcpHtml>
+	<LogHtml>Log_en.html</LogHtml>
+	<LiveHtml>Live_en.html</LiveHtml>
+	<CountHtml>HumanCounts_en.html</CountHtml>
+	<FrameHtml>DailyFrameRecords_en.html</FrameHtml>
+	<WireHtml>TripWires_en.html</WireHtml>
+	<MaskHtml>Mask_en.html</MaskHtml>
+	<ROIHtml>ROI_en.html</ROIHtml>
+	<VideoRecordHtml>VideoRecord_en.html</VideoRecordHtml>
+	<AdvancedSettings>Advanced Settings:</AdvancedSettings>
+	<CountSettings>Counting Settings:</CountSettings>
+	<SystemSettings>System Settings:</SystemSettings>
+	<SystemCommand>System Commands:</SystemCommand>
+	<CameraSettings>Camera Settings:</CameraSettings>
+	<ParemeterSettings>Parameter Settings:</ParemeterSettings>
+	<ButtonSend>Send</ButtonSend>
+	<ButtonUndo>Undo All</ButtonUndo>
+	<StartTime>Application Start Time:</StartTime>	
+	<NameFieldName>Name_en</NameFieldName>
+	<MessageFieldName>message_en</MessageFieldName>
+	<ParamHtmlPart>_en.html"</ParamHtmlPart>
+	<Javascript>
+		<Sunday>Sunday</Sunday>
+		<Monday>Monday</Monday>
+		<Tuesday>Tuesday</Tuesday>
+		<Wednesday>Wednesday</Wednesday>
+		<Thursday>Thursday</Thursday>
+		<Friday>Friday</Friday>
+		<Saturday>Saturday</Saturday>
+		<Jan>January</Jan>
+		<Feb>February</Feb>
+		<Mar>March</Mar>
+		<Apr>April</Apr>
+		<May>May</May>
+		<Jun>June</Jun>
+		<Jul>July</Jul>
+		<Aug>August</Aug>
+		<Sep>September</Sep>
+		<Oct>October</Oct>
+		<Nov>November</Nov>
+		<Dec>December</Dec>
+		<ZeroHeight>Please enter a valid height!</ZeroHeight>
+		<SendFail>Settings could not be send to server!</SendFail>
+		<WrongInput>Some of the parameters are out of range, Please check again</WrongInput>
+		<ReadFail>Parameter value read error!</ReadFail>
+		<Restart>Do you want to restart the application anyway?</Restart>
+		<WillRestart>Application will be restarted in 25 seconds and the page will be reloaded</WillRestart>
+		<RestartError>Application could not be restarted!</RestartError>
+		<KickUser>Make the other users sign out?</KickUser>
+		<Mean>Mean has already been set. Proceed anyway?</Mean>
+		<Kicked>Other user's session has been terminated successfully!</Kicked>
+		<KickError>Users could not be signed out!</KickError>
+		<Wait>Lütfen bekleyiniz. / Please wait.</Wait>
+		<WaitError>Hata! / Error!</WaitError>
+		<Block>Forbid the application for other users?</Block>
+		<Blocked>Other users are forbidded!</Blocked>
+		<BlockFail>Fail!</BlockFail>
+		<Allow>Allow the application for other users?</Allow>
+		<Allowed>Other users are allowed to login!</Allowed>
+		<AllowFail>Fail!</AllowFail>
+		<LogoutConfirm>Do you want to logout?</LogoutConfirm>
+		<Loggedout>Your session has been closed!</Loggedout>
+		<LogoutError>Fail!</LogoutError>
+		<RebootConfirm>Do you want to reboot the device anyway?</RebootConfirm>
+		<Rebooted>Device will be rebooted in 1 minute and page will be reloaded</Rebooted>
+		<RebootError>Fail!</RebootError>
+		<SaveConfig>Configuration file could not be created!</SaveConfig>
+		<Dspreset>Do you restart the Image Processing anyway?</Dspreset>
+		<Dspresetted>Image processing restarted!</Dspresetted>
+		<DspresetError>Fail!</DspresetError>
+		<TcpSendError>Fail!</TcpSendError>
+		<TcpReset>Do you want to set the factory settings?\n</TcpReset>
+		<TcpWillReset>Device will be set to factory settings in 1 minute and page will be reloaded</TcpWillReset>
+		<TcpResetError>Fail!</TcpResetError>
+		<ConfirmText>Settings are send to server, to activate the settings do you want to restart the device?</ConfirmText>
+		<AlertText1>Device will be restarted in 70 seconds and page will be reloaded</AlertText1>
+		<AlertText2>Device could not be restarted!</AlertText2>
+		<AppRestart>Settings are send to server, to activate the settings do you want to restart the application?</AppRestart>
+		<AppText1>Application will be restarted in 25 seconds and page will be reloaded</AppText1>
+		<AppText2>Application could not be restarted!</AppText2>
+		<Refresh>Settings are send to server, new settings will be reloaded from the server in 5 seconds</Refresh>
+		<Ipv4>Please enter a valid IP address  (XXX.XXX.XXX.XXX)</Ipv4>
+		<FloatChck>Please enter a decimal fraction</FloatChck>
+		<Greater>Please enter a number larger than first value.</Greater>
+		<Lesser>Please enter a number less than first value.</Lesser>
+		<GreaterOrEq>Please enter a number larger than or equal to  first value.</GreaterOrEq>
+		<LessOrEq>Please enter a number less than or equal to first value.</LessOrEq>
+		<NonEmpty>This field is required.</NonEmpty>
+		<RangeChck>Please enter a value between {0} and {1}.</RangeChck>
+		<MaxChck>Please enter a value less than or equal to {0}.</MaxChck>
+		<MinChck>Please enter a value greater than or equal to {0}.</MinChck>
+		<NumChck>Please enter a valid number.</NumChck>
+		<RangeLen>Please enter a value between {0} and {1} characters long.</RangeLen>
+		<DigitChck>Please enter only digits.</DigitChck>
+		<MaxLen>Please enter no more than {0} characters.</MaxLen>
+		<MinLen>Please enter at least {0} characters.</MinLen>
+		<RemoteChck>Please fix this field.</RemoteChck>
+		<EmptyTable>No data available in table</EmptyTable>
+	</Javascript>
+
+</Root>

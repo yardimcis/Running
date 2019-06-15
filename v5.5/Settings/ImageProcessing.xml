@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<CalibrationFileName>StereoCalibration.yml</CalibrationFileName>
+	<CountingAlgorithm>0</CountingAlgorithm>
+	<MaxHumanCount>-1</MaxHumanCount>
+	<Mean>-1</Mean>
+	<GroupCounting>0</GroupCounting>
+	<GroupCountingTime>10</GroupCountingTime>
+    <ChildCount>
+        <Active Name="Çocuk Sayımı" Name_en="Count Children" validate="required: true, number: true, range: [0,1]">0</Active>
+        <Ratio Name="Çocuk Oranı" Name_en="Child Ratio" validate="required: true, number: true, range: [0,100]">50</Ratio>
+    </ChildCount>
+	<OpticalFlow>
+			<Active Name="Optical Flow" Name_en="Optical Flow" validate="required: true, number: true, range: [0,1]">1</Active>
+	</OpticalFlow>
+    <StreetCount>
+        <Active Name="Cadde Sayımı" Name_en="Count Street" validate="required: true, number: true, range: [0,1]">0</Active>
+    </StreetCount>
+    <NumberOfSets Name="Algoritma Set Sayısı" Name_en="Algorithm Set Count" validate="required: true, number: true, range: [1,4]">1</NumberOfSets>
+    <Algorithm1>
+        <NumberOfTimeIntervals Name="[1]Çalışma Zaman Aralık Sayısı" Name_en="[1]Working Time Interval Count" validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="[1]Zaman 1 - Başlangıç Saati" Name_en="[1]Time 1 - Start Hour" validate="required: true, number: true, range: [0,23]">00:00</Hour>
+                <Minute Name="[1]Zaman 1 - Başlangıç Dakikası" Name_en="[1]Time 1 - Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="[1]Zaman 1 - Bitiş Saati" Name_en="[1]Time 1 - End Hour" validate="required: true, number: true, range: [0,23], greaterorequal: &apos;[id=Algorithm1.TimeInterval1.StartTime.Hour]&apos;" message="greaterorequal: &apos;Bitis saat degeri baslangic saat değerinden buyuk olmak zorundadir&apos;" message_en="greaterorequal: &apos;End hour value must be greater than start hour value&apos;">23:59</Hour>
+                <Minute Name="[1]Zaman 1 - Bitiş Dakikası" Name_en="[1]Time 1 - End Minute" validate="required: true, number: true, range: [0,59]">59</Minute>
+            </EndTime>
+        </TimeInterval1>
+        <Threshold>
+            <Background Name="[1]Arkaplan Eşik Değeri" Name_en="[1]Background Threshold Value" Description="Arkaplan elemesi yaparken threshold olarak kullanilacak deger" validate="required: true, number: true, range: [0,255]">20</Background>
+            <Shadow Name="[1]Gölge Eşik Değeri" Name_en="[1]Shadow Threshold Value" Description="Golge elemesi yaparken threshold olarak kullanilacak deger (0-&gt;Golge yok, 5-&gt;Cok fazla golge var)" validate="required: true, number: true, range: [0,5]">2</Shadow>
+        </Threshold>
+        <Human>
+            <Size Name="[1]İnsan Büyüklüğü" Name_en="[1]Human Size" Description="Insan aranirkan bir insan cember varsayiliyor, bir insanin piksel cinsinden capi" validate="required: true, number: true, range: [10,90]">51</Size>
+            <Enlarge Name="[1]Boyut Genişletme Katsayısı" Name_en="[1]Expanding Size Coefficient" Description="Bir insan aranirken ideal boyutundan ne kadar buyuk olabilir" validate="required: true, float: true, range: [1.0,5.0]">1.1</Enlarge>
+            <Reduce Name="[1]Boyut Daraltma Katsayısı" Name_en="[1]Reducing Size Coefficient" Description="Bir insan aranirken ideal boyutundan ne kadar kucuk olabilir" validate="required: true, float: true, range: [0.0,1.0]">0.2</Reduce>
+        </Human>
+        <Calibration>
+            <Active Name="[1]Kalibrasyon" Name_en="[1]Calibration" Description="Goruntu islemede kalibrasyonu aktif/deaktif hale getirir" validate="required: true, digits: true, range: [0,1]">0</Active>
+        </Calibration>
+        <Learning>
+            <Background>
+                <IntegrationFactor Name="[1]Arkaplan Öğrenme Katsayısı" Name_en="[1]Background Learning Coefficient" Description="Arkaplan elemesi yaparken yeni gelen resmin öğrenilmiş arkaplan üzerine etkisi" validate="required: true, float: true, range: [0.0,1.0]">0.05</IntegrationFactor>
+            </Background>
+            <Foreground>
+                <IntegrationFactor Name="[1]Önplan Öğrenme Katsayısı" Name_en="[1]Foreground Learning Coefficient" Description="Arkaplan elemesi yaparken yeni gelen resmin öğrenilmiş önplan üzerine etkisi" validate="required: true, float: true, range: [0.0,1.0]">0.005</IntegrationFactor>
+            </Foreground>
+            <Speed>
+                <Median Name="[1]Medyan Öğrenme Hızı" Name_en="[1]Median Learning Speed" Description="Arkaplan ve önplan öğrenmede medyan değeri öğrenme hızı (0-&gt;yavaş, 1-&gt;normal, 2-&gt;hızlı)" validate="required: true, number: true, range: [0,2]">1</Median>
+                <Secondary Name="[1]İkincil Öğrenme Hızı" Name_en="[1]Secondary Learning Speed" Description="Arkaplan ve önplan öğrenmede ikincil değeri öğrenme hızı (0-&gt;yavaş, 1-&gt;normal, 2-&gt;hızlı)" validate="required: true, number: true, range: [0,2]">1</Secondary>
+            </Speed>
+            <Motion Name="[1]Hareket Algılama Hassaslığı" Name_en="[1]Movement Detection Sensitivity" Description="Açılışta arkaplan ve önplan öğrenmede hareket algılama hassaslığı" validate="required: true, float: true, range: [0.001,0.1]">0.01</Motion>
+        </Learning>
+        <Stereo>
+            <SADWindowSize>21</SADWindowSize>
+            <NumberOfDisparities>16</NumberOfDisparities>
+            <PreFilterCap>25</PreFilterCap>
+            <MinDisparity>7</MinDisparity>
+            <Disp12MaxDiff>16</Disp12MaxDiff>
+            <UniquenessRatio>0</UniquenessRatio>
+            <DepthThreshold>255</DepthThreshold>
+			<DepthThresholdUpperRegion>255</DepthThresholdUpperRegion>
+			<UpperRegionRatio>0.0</UpperRegionRatio>
+			<DepthThresholdChild>255</DepthThresholdChild>
+            <LeftRight>1</LeftRight>
+            <MorphologyCount>0</MorphologyCount>
+			<ChildMorphologyCount>0</ChildMorphologyCount>
+            <PreFilterType>1</PreFilterType>
+			<Substract>0</Substract>
+			<Division>1.0</Division>
+			<KernelSize>19</KernelSize>
+			<Sigma>4</Sigma>
+        </Stereo>
+        <Tracking>
+            <MatchDistanceCoeff>1.0</MatchDistanceCoeff>
+            <MiddleCircleActive>0</MiddleCircleActive>
+            <DistanceCoeff>1.0</DistanceCoeff>
+            <MaxAreaCoeff>1.0</MaxAreaCoeff>
+        </Tracking>
+        <ResultCoefficient>
+            <IncomingMonday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingMonday>
+            <IncomingTuesday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingTuesday>
+            <IncomingWednesday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingWednesday>
+            <IncomingThursday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingThursday>
+            <IncomingFriday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingFriday>
+            <IncomingSaturday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingSaturday>
+            <IncomingSunday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingSunday>
+            <OutgoingMonday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingMonday>
+            <OutgoingTuesday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingTuesday>
+            <OutgoingWednesday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingWednesday>
+            <OutgoingThursday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingThursday>
+            <OutgoingFriday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingFriday>
+            <OutgoingSaturday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingSaturday>
+            <OutgoingSunday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingSunday>
+			<StreetMonday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetMonday>
+            <StreetTuesday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetTuesday>
+            <StreetWednesday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetWednesday>
+            <StreetThursday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetThursday>
+            <StreetFriday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetFriday>
+            <StreetSaturday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetSaturday>
+            <StreetSunday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetSunday>
+			
+        </ResultCoefficient>
+    </Algorithm1>
+    <Algorithm2>
+        <NumberOfTimeIntervals Name="[2]Çalışma Zaman Aralık Sayısı" Name_en="[2]Working Time Interval Count" validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="[2]Zaman 1 - Başlangıç Saati" Name_en="[2]Time 1 - Start Hour" validate="required: true, number: true, range: [0,23]">00:00</Hour>
+                <Minute Name="[2]Zaman 1 - Başlangıç Dakikası" Name_en="[2]Time 1 - Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="[2]Zaman 1 - Bitiş Saati" Name_en="[2]Time 1 - End Hour" validate="required: true, number: true, range: [0,23], greaterorequal: &apos;[id=Algorithm2.TimeInterval1.StartTime.Hour]&apos;" message="greaterorequal: &apos;Bitis saat degeri baslangic saat değerinden buyuk olmak zorundadir&apos;" message_en="greaterorequal: &apos;End hour value must be greater than start hour value&apos;">23:59</Hour>
+                <Minute Name="[2]Zaman 1 - Bitiş Dakikası" Name_en="[2]Time 1 - End Minute" validate="required: true, number: true, range: [0,59]">59</Minute>
+            </EndTime>
+        </TimeInterval1>
+        <Threshold>
+            <Background Name="[2]Arkaplan Eşik Değeri" Name_en="[2]Background Threshold Value" Description="Arkaplan elemesi yaparken threshold olarak kullanilacak deger" validate="required: true, number: true, range: [0,255]">31</Background>
+            <Shadow Name="[2]Gölge Eşik Değeri" Name_en="[2]Shadow Threshold Value" Description="Golge elemesi yaparken threshold olarak kullanilacak deger(0-&gt;Golge yok, 5-&gt;Cok fazla golge var)" validate="required: true, number: true, range: [0,5]">2</Shadow>
+        </Threshold>
+        <Human>
+            <Size Name="[2]İnsan Büyüklüğü" Name_en="[2]Human Size" Description="Insan aranirkan bir insan cember varsayiliyor, bir insanin piksel cinsinden capi" validate="required: true, number: true, range: [10,90]">50</Size>
+            <Enlarge Name="[2]Boyut Genişletme Katsayısı" Name_en="[2]Expanding Size Coefficient" Description="Bir insan aranirken ideal boyutundan ne kadar buyuk olabilir" validate="required: true, float: true, range: [1.0,5.0]">1.1</Enlarge>
+            <Reduce Name="[2]Boyut Daraltma Katsayısı" Name_en="[2]Reducing Size Coefficient" Description="Bir insan aranirken ideal boyutundan ne kadar kucuk olabilir" validate="required: true, float: true, range: [0.0,1.0]">0.2</Reduce>
+        </Human>
+        <Calibration>
+            <Active Name="[2]Kalibrasyon" Name_en="[2]Calibration" Description="Goruntu islemede kalibrasyonu aktif/deaktif hale getirir" validate="required: true, digits: true, range: [0,1]">0</Active>
+        </Calibration>
+        <Learning>
+            <Background>
+                <IntegrationFactor Name="[2]Arkaplan Öğrenme Katsayısı" Name_en="[2]Background Learning Coefficient" Description="Arkaplan elemesi yaparken yeni gelen resmin öğrenilmiş arkaplan üzerine etkisi" validate="required: true, float: true, range: [0.0,1.0]">0.05</IntegrationFactor>
+            </Background>
+            <Foreground>
+                <IntegrationFactor Name="[2]Önplan Öğrenme Katsayısı" Name_en="[2]Foreground Learning Coefficient" Description="Arkaplan elemesi yaparken yeni gelen resmin öğrenilmiş önplan üzerine etkisi" validate="required: true, float: true, range: [0.0,1.0]">0.005</IntegrationFactor>
+            </Foreground>
+            <Speed>
+                <Median Name="[2]Medyan Öğrenme Hızı" Name_en="[2]Median Learning Speed" Description="Arkaplan ve önplan öğrenmede medyan değeri öğrenme hızı (0-&gt;yavaş, 1-&gt;normal, 2-&gt;hızlı)" validate="required: true, number: true, range: [0,2]">1</Median>
+                <Secondary Name="[2]İkincil Öğrenme Hızı" Name_en="[2]Secondary Learning Speed" Description="Arkaplan ve önplan öğrenmede ikincil değeri öğrenme hızı (0-&gt;yavaş, 1-&gt;normal, 2-&gt;hızlı)" validate="required: true, number: true, range: [0,2]">1</Secondary>
+            </Speed>
+            <Motion Name="[2]Hareket Algılama Hassaslığı" Name_en="[2]Movement Detection Sensitivity" Description="Açılışta arkaplan ve önplan öğrenmede hareket algılama hassaslığı" validate="required: true, float: true, range: [0.001,0.1]">0.01</Motion>
+        </Learning>
+        <Stereo>
+            <SADWindowSize>21</SADWindowSize>
+            <NumberOfDisparities>16</NumberOfDisparities>
+            <PreFilterCap>21</PreFilterCap>
+            <MinDisparity>5</MinDisparity>
+            <Disp12MaxDiff>16</Disp12MaxDiff>
+            <UniquenessRatio>0</UniquenessRatio>
+            <DepthThreshold>255</DepthThreshold>
+			<DepthThresholdUpperRegion>255</DepthThresholdUpperRegion>
+			<UpperRegionRatio>0.0</UpperRegionRatio>
+			<DepthThresholdChild>255</DepthThresholdChild>
+            <LeftRight>1</LeftRight>
+            <MorphologyCount>1</MorphologyCount>
+			<ChildMorphologyCount>0</ChildMorphologyCount>
+            <PreFilterType>1</PreFilterType>
+			<Substract>0</Substract>
+			<Division>1.0</Division>
+			<KernelSize>19</KernelSize>
+			<Sigma>4</Sigma>
+        </Stereo>
+        <Tracking>
+            <MatchDistanceCoeff>1.0</MatchDistanceCoeff>
+            <MiddleCircleActive>0</MiddleCircleActive>
+            <DistanceCoeff>1.0</DistanceCoeff>
+            <MaxAreaCoeff>1.0</MaxAreaCoeff>
+        </Tracking>
+        <ResultCoefficient>
+            <IncomingMonday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingMonday>
+            <IncomingTuesday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingTuesday>
+            <IncomingWednesday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingWednesday>
+            <IncomingThursday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingThursday>
+            <IncomingFriday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingFriday>
+            <IncomingSaturday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingSaturday>
+            <IncomingSunday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingSunday>
+            <OutgoingMonday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingMonday>
+            <OutgoingTuesday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingTuesday>
+            <OutgoingWednesday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingWednesday>
+            <OutgoingThursday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingThursday>
+            <OutgoingFriday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingFriday>
+            <OutgoingSaturday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingSaturday>
+            <OutgoingSunday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingSunday>
+			<StreetMonday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetMonday>
+            <StreetTuesday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetTuesday>
+            <StreetWednesday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetWednesday>
+            <StreetThursday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetThursday>
+            <StreetFriday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetFriday>
+            <StreetSaturday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetSaturday>
+            <StreetSunday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetSunday>
+        </ResultCoefficient>
+    </Algorithm2>
+    <Algorithm3>
+        <NumberOfTimeIntervals Name="[3]Çalışma Zaman Aralık Sayısı" Name_en="[3]Working Time Interval Count" validate="required: true, number: true, range: [1,1]">1</NumberOfTimeIntervals>
+        <TimeInterval1>
+            <StartTime>
+                <Hour Name="[3]Zaman 1 - Başlangıç Saati" Name_en="[3]Time 1 - Start Hour" validate="required: true, number: true, range: [0,23]">00:00</Hour>
+                <Minute Name="[3]Zaman 1 - Başlangıç Dakikası" Name_en="[3]Time 1 - Start Minute" validate="required: true, number: true, range: [0,59]">00</Minute>
+            </StartTime>
+            <EndTime>
+                <Hour Name="[3]Zaman 1 - Bitiş Saati" Name_en="[3]Time 1 - End Hour" validate="required: true, number: true, range: [0,23], greaterorequal: &apos;[id=Algorithm3.TimeInterval1.StartTime.Hour]&apos;" message="greaterorequal: &apos;Bitis saat degeri baslangic saat değerinden buyuk olmak zorundadir&apos;" message_en="greaterorequal: &apos;End hour value must be greater than start hour value&apos;">23:59</Hour>
+                <Minute Name="[3]Zaman 1 - Bitiş Dakikası" Name_en="[3]Time 1 - End Minute" validate="required: true, number: true, range: [0,59]">59</Minute>
+            </EndTime>
+        </TimeInterval1>
+        <Threshold>
+            <Background Name="[3]Arkaplan Eşik Değeri" Name_en="[3]Background Threshold Value" Description="Arkaplan elemesi yaparken threshold olarak kullanilacak deger" validate="required: true, number: true, range: [0,255]">32</Background>
+            <Shadow Name="[3]Gölge Eşik Değeri" Name_en="[3]Shadow Threshold Value" Description="Golge elemesi yaparken threshold olarak kullanilacak deger(0-&gt;Golge yok, 5-&gt;Cok fazla golge var)" validate="required: true, number: true, range: [0,5]">2</Shadow>
+        </Threshold>
+        <Human>
+            <Size Name="[3]İnsan Büyüklüğü" Name_en="[3]Human Size" Description="Insan aranirkan bir insan cember varsayiliyor, bir insanin piksel cinsinden capi" validate="required: true, number: true, range: [10,90]">50</Size>
+            <Enlarge Name="[3]Boyut Genişletme Katsayısı" Name_en="[3]Expanding Size Coefficient" Description="Bir insan aranirken ideal boyutundan ne kadar buyuk olabilir" validate="required: true, float: true, range: [1.0,5.0]">1.1</Enlarge>
+            <Reduce Name="[3]Boyut Daraltma Katsayısı" Name_en="[3]Reducing Size Coefficient" Description="Bir insan aranirken ideal boyutundan ne kadar kucuk olabilir" validate="required: true, float: true, range: [0.0,1.0]">0.2</Reduce>
+        </Human>
+        <Calibration>
+            <Active Name="[3]Kalibrasyon" Name_en="[3]Calibration" Description="Goruntu islemede kalibrasyonu aktif/deaktif hale getirir" validate="required: true, digits: true, range: [0,1]">0</Active>
+        </Calibration>
+        <Learning>
+            <Background>
+                <IntegrationFactor Name="[3]Arkaplan Öğrenme Katsayısı" Name_en="[3]Background Learning Coefficient" Description="Arkaplan elemesi yaparken yeni gelen resmin öğrenilmiş arkaplan üzerine etkisi" validate="required: true, float: true, range: [0.0,1.0]">0.05</IntegrationFactor>
+            </Background>
+            <Foreground>
+                <IntegrationFactor Name="[3]Önplan Öğrenme Katsayısı" Name_en="[3]Foreground Learning Coefficient" Description="Arkaplan elemesi yaparken yeni gelen resmin öğrenilmiş önplan üzerine etkisi" validate="required: true, float: true, range: [0.0,1.0]">0.005</IntegrationFactor>
+            </Foreground>
+            <Speed>
+                <Median Name="[3]Medyan Öğrenme Hızı" Name_en="[3]Median Learning Speed" Description="Arkaplan ve önplan öğrenmede medyan değeri öğrenme hızı (0-&gt;yavaş, 1-&gt;normal, 2-&gt;hızlı)" validate="required: true, number: true, range: [0,2]">1</Median>
+                <Secondary Name="[3]İkincil Öğrenme Hızı" Name_en="[3]Secondary Learning Speed" Description="Arkaplan ve önplan öğrenmede ikincil değeri öğrenme hızı (0-&gt;yavaş, 1-&gt;normal, 2-&gt;hızlı)" validate="required: true, number: true, range: [0,2]">1</Secondary>
+            </Speed>
+            <Motion Name="[3]Hareket Algılama Hassaslığı" Name_en="[3]Movement Detection Sensitivity" Description="Açılışta arkaplan ve önplan öğrenmede hareket algılama hassaslığı" validate="required: true, float: true, range: [0.001,0.1]">0.01</Motion>
+        </Learning>
+        <Stereo>
+            <SADWindowSize>21</SADWindowSize>
+            <NumberOfDisparities>16</NumberOfDisparities>
+            <PreFilterCap>21</PreFilterCap>
+            <MinDisparity>5</MinDisparity>
+            <Disp12MaxDiff>16</Disp12MaxDiff>
+            <UniquenessRatio>0</UniquenessRatio>
+            <DepthThreshold>255</DepthThreshold>
+			<DepthThresholdUpperRegion>255</DepthThresholdUpperRegion>
+			<UpperRegionRatio>0.0</UpperRegionRatio>
+			<DepthThresholdChild>255</DepthThresholdChild>
+            <LeftRight>1</LeftRight>
+            <MorphologyCount>1</MorphologyCount>
+			<ChildMorphologyCount>0</ChildMorphologyCount>
+            <PreFilterType>1</PreFilterType>
+			<Substract>0</Substract>
+			<Division>1.0</Division>
+			<KernelSize>19</KernelSize>
+			<Sigma>4</Sigma>
+        </Stereo>
+        <Tracking>
+            <MatchDistanceCoeff>1.0</MatchDistanceCoeff>
+            <MiddleCircleActive>0</MiddleCircleActive>
+            <DistanceCoeff>1.0</DistanceCoeff>
+            <MaxAreaCoeff>1.0</MaxAreaCoeff>
+        </Tracking>
+        <ResultCoefficient>
+            <IncomingMonday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingMonday>
+            <IncomingTuesday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingTuesday>
+            <IncomingWednesday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingWednesday>
+            <IncomingThursday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingThursday>
+            <IncomingFriday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingFriday>
+            <IncomingSaturday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingSaturday>
+            <IncomingSunday Name="Giren Sonuç Katsayısı" Name_en="Result In Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</IncomingSunday>
+            <OutgoingMonday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingMonday>
+            <OutgoingTuesday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingTuesday>
+            <OutgoingWednesday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingWednesday>
+            <OutgoingThursday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingThursday>
+            <OutgoingFriday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingFriday>
+            <OutgoingSaturday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingSaturday>
+            <OutgoingSunday Name="Çıkan Sonuç Katsayısı" Name_en="Result Out Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</OutgoingSunday>
+			<StreetMonday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetMonday>
+            <StreetTuesday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetTuesday>
+            <StreetWednesday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetWednesday>
+            <StreetThursday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetThursday>
+            <StreetFriday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetFriday>
+            <StreetSaturday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetSaturday>
+            <StreetSunday Name="Sokak Sonuç Katsayısı" Name_en="Result Street Coefficient" Description="İnsan sayma sonuçlarını girilen değer ile çarpar">1.0</StreetSunday>
+        </ResultCoefficient>
+    </Algorithm3>
+    <Height>200</Height>
+    <MeasurementUnit Description="SI or US">SI</MeasurementUnit>
+    <IncomingAddition Description="In case of frame drop, add this value">25</IncomingAddition>
+    <OutgoingAddition Description="In case of frame drop, add this value">25</OutgoingAddition>
+</Root>

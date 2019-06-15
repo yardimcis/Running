@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<Tcp>A&#287; Ayarlar&#305;</Tcp>
+	<Log>&#199;al&#305;&#351;ma G&#252;nl&#252;kleri</Log>
+	<Live>Canl&#305; Ak&#305;&#351;</Live>
+	<Count>Say&#305;m Sonu&#231;lar&#305;</Count>
+	<FrameRecord>G&#252;nl&#252;k Resim Kay&#305;tlar&#305;</FrameRecord>
+	<Save>Ayarlar&#305; &#304;ndir</Save>
+	<Upload>Ayarlar&#305; Y&#252;kle</Upload>
+	<ResetDSP>G&#246;r&#252;nt&#252; &#304;&#351;lemeyi S&#305;f&#305;rla</ResetDSP>
+	<Restart>Uygulamay&#305; Yeniden Ba&#351;lat</Restart>
+	<Reboot>Makineyi Yeniden Ba&#351;lat</Reboot>
+	<Kick>Kullan&#305;c&#305;lar&#305; At</Kick>
+	<AllowUser>Giri&#351;e &#304;zin Ver</AllowUser>
+	<NotAllowUser>Giri&#351; Engelle</NotAllowUser>
+	<Logout>&#199;&#305;k&#305;&#351;</Logout>
+	<TripWire>Giri&#351; - &#199;&#305;k&#305;&#351; &#199;izgileri</TripWire>
+	<Mask>G&#246;r&#252;nt&#252; Maskeleme</Mask>
+	<ROI>Say&#305;m Alan&#305;</ROI>
+	<VideoRecord>Video Kayd&#305;</VideoRecord>
+	<Parameter>
+		<Network>Uza&#287;a Veri Yazma</Network>
+		<ImageProcess>G&#246;r&#252;nt&#252; &#304;&#351;leme</ImageProcess>
+		<WorkTime>&#199;al&#305;&#351;ma Saatleri</WorkTime>
+		<WebServer>&#304;nternet Sunucusu</WebServer>
+		<FrameRec>G&#252;nl&#252;k Resim Kaydetme</FrameRec>
+		<Sync>Sonu&#231; Senkronizasyonu</Sync>
+		<LiveStream>Canl&#305; Ak&#305;&#351;</LiveStream>
+		<TimeZone>Saat Dilimi</TimeZone>
+		<Raspicam>Kamera Ayarlar&#305;</Raspicam>
+	</Parameter>
+	<In>Gir:</In>
+	<Out>Cik:</Out>
+	<InChild>Gir_C:</InChild>
+	<OutChild>Cik_C:</OutChild>
+	<NoAccess>BU SAYFAYA GIRIS IZNINIZ BULUNMAMAKTADIR.\r\n</NoAccess>
+	<Blocked>ERISIM HAKKINIZ GECICI OLARAK ADMIN TARAFINDAN ENGELLENMISTIR\r\n</Blocked>
+	<SessionEnd>OTURUMUNUZUN SURESI DOLDU</SessionEnd>
+	<BackToLogin>Geri</BackToLogin>
+	<WrongPass>Yanlis Kullanici Adi ve/veya Sifre!</WrongPass>
+	<UploadHtml>FileUpload.html</UploadHtml>
+	<TcpHtml>TcpSettings.html</TcpHtml>
+	<LogHtml>Log.html</LogHtml>
+	<LiveHtml>Live.html</LiveHtml>
+	<CountHtml>HumanCounts.html</CountHtml>
+	<FrameHtml>DailyFrameRecords.html</FrameHtml>
+	<WireHtml>TripWires.html</WireHtml>
+	<MaskHtml>Mask.html</MaskHtml>
+	<ROIHtml>ROI.html</ROIHtml>
+	<VideoRecordHtml>VideoRecord.html</VideoRecordHtml>
+	<AdvancedSettings>Geli&#351;mi&#351; Ayarlar:</AdvancedSettings>
+	<CountSettings>Sayma Ayarlar&#305;:</CountSettings>
+	<SystemSettings>Sistem Ayarlar&#305;:</SystemSettings>
+	<SystemCommand>Sistem Komutlar&#305;:</SystemCommand>
+	<CameraSettings>Kamera Ayarlar&#305;:</CameraSettings>
+	<ParemeterSettings>Parametre Ayarlar&#305;:</ParemeterSettings>
+	<ButtonSend>G&#246;nder</ButtonSend>
+	<ButtonUndo>Sunucudan Al</ButtonUndo>
+	<StartTime>Uygulama A&#231;&#305;l&#305;&#351; Saati:</StartTime>
+	<NameFieldName>Name</NameFieldName>
+	<MessageFieldName>message</MessageFieldName>
+	<ParamHtmlPart>.html"</ParamHtmlPart>
+	<Javascript>
+		<Sunday>Pazar</Sunday>
+		<Monday>Pazartesi</Monday>
+		<Tuesday>Sal&#305;</Tuesday>
+		<Wednesday>&#199;ar&#351;amba</Wednesday>
+		<Thursday>Per&#351;embe</Thursday>
+		<Friday>Cuma</Friday>
+		<Saturday>Cumartesi</Saturday>
+		<Jan>Ocak</Jan>
+		<Feb>&#350;ubat</Feb>
+		<Mar>Mart</Mar>
+		<Apr>Nisan</Apr>
+		<May>May&#305;s</May>
+		<Jun>Haziran</Jun>
+		<Jul>Temmuz</Jul>
+		<Aug>A&#287;ustos</Aug>
+		<Sep>Eyl&#252;l</Sep>
+		<Oct>Ekim</Oct>
+		<Nov>Kas&#305;m</Nov>
+		<Dec>Aral&#305;k</Dec>
+		<ZeroHeight>Ge&#231;erli bir y&#252;kseklik giriniz!</ZeroHeight>
+		<SendFail>Parametre de&#287;erleri sunucuya g&#246;nderilemedi!</SendFail>
+		<WrongInput>Parametre de&#287;erlerinden baz&#305;lar&#305; yanl&#305;&#351; girilmi&#351;, l&#252;tfen d&#252;zeltip tekrar deneyin</WrongInput>
+		<ReadFail>Parametre de&#287;erleri sunucudan okunamad&#305;!</ReadFail>
+		<Restart>Uygulamay&#305; yeniden ba&#351;latmak istiyor musunuz?</Restart>
+		<WillRestart>Uygulama 25 saniye i&#231;inde yeniden ba&#351;lat&#305;lacak ve sayfa otomatik olarak yenilenecek</WillRestart>
+		<RestartError>Uygulama yeniden ba&#351;lat&#305;lamad&#305;!</RestartError>
+		<KickUser>Di&#287;er kullan&#305;c&#305;lar&#305; atmak istiyor musunuz?</KickUser>
+		<Mean>Mean zaten degisitirildi. Devam etmek istiyor musunuz?</Mean>
+		<Kicked>Kullan&#305;c&#305;lar ba&#351;ar&#305;yla at&#305;ld&#305;!</Kicked>
+		<KickError>Kullan&#305;c&#305;lar at&#305;lamad&#305;!</KickError>
+		<Wait>L&#252;tfen bekleyiniz. / Please wait.</Wait>
+		<WaitError>Hata! / Error!</WaitError>
+		<Block>Di&#287;er kullan&#305;c&#305;lar&#305;n giri&#351; yapmas&#305;n&#305; engellemek istiyor musunuz?</Block>
+		<Blocked>Di&#287;er kullan&#305;c&#305;lar&#305;n giri&#351; yapmas&#305; ba&#351;ar&#305;yla engellendi!</Blocked>
+		<BlockFail>Kullan&#305;c&#305;lar engellenemedi!</BlockFail>
+		<Allow>Di&#287;er kullan&#305;c&#305;lar&#305;n giri&#351; yapmas&#305;na izin vermek istiyor musunuz?</Allow>
+		<Allowed>Di&#287;er kullan&#305;c&#305;lar&#305;n giri&#351; yapmas&#305;na ba&#351;ar&#305;yla izin verildi!</Allowed>
+		<AllowFail>Kullan&#305;c&#305;lar&#305;n giri&#351; yapmas&#305;na izin verilemedi!</AllowFail>
+		<LogoutConfirm>&#199;&#305;k&#305;&#351; yapmak istedi&#287;inizden emin misiniz?</LogoutConfirm>
+		<Loggedout>Oturumunuz kapat&#305;ld&#305;!</Loggedout>
+		<LogoutError>Oturumunuz kapat&#305;lamad&#305;!</LogoutError>
+		<RebootConfirm>Makineyi yeniden ba&#351;latmak istiyor musunuz?</RebootConfirm>
+		<Rebooted>Makine 1 dakika i&#231;inde yeniden ba&#351;lat&#305;lacak ve sayfa otomatik olarak yenilenecek</Rebooted>
+		<RebootError>Makine yeniden ba&#351;lat&#305;lamad&#305;!</RebootError>
+		<SaveConfig>Konfig&#252;rasyon ar&#351;iv dosyas&#305; olu&#351;turulamad&#305;!</SaveConfig>
+		<Dspreset>G&#246;r&#252;nt&#252; i&#351;leme verilerini s&#305;f&#305;rlamak istiyor musunuz?</Dspreset>
+		<Dspresetted>G&#246;r&#252;nt&#252; i&#351;leme verileri ba&#351;ar&#305;yla s&#305;f&#305;rland&#305;!</Dspresetted>
+		<DspresetError>G&#246;r&#252;nt&#252; i&#351;leme verileri s&#305;f&#305;rlanamad&#305;!</DspresetError>
+		<TcpSendError>A&#287; ayarlar&#305; de&#287;i&#351;tirilemedi!</TcpSendError>
+		<TcpReset>A&#287; ayarlar&#305;n&#305; s&#305;f&#305;rlamak istiyor musunuz?\n</TcpReset>
+		<TcpWillReset>A&#287; ayarlar&#305; s&#305;f&#305;rlan&#305;p makine 1 dakika i&#231;inde yeniden ba&#351;lat&#305;lacak ve sayfa otomatik olarak yenilenecek</TcpWillReset>
+		<TcpResetError>A&#287; ayarlar&#305; ilk de&#287;erlerine d&#246;nd&#252;r&#252;lemedi!</TcpResetError>
+		<ConfirmText>Parametre ayarlar&#305; sunucuya yolland&#305;, ayarlar&#305;n aktif olmas&#305; i&#231;in makineyi yeniden ba&#351;latmak istiyor musunuz?</ConfirmText>
+		<AlertText1>Makine 70 saniye i&#231;inde yeniden ba&#351;lat&#305;lacak ve sayfa otomatik olarak yenilenecek</AlertText1>
+		<AlertText2>Makine yeniden ba&#351;lat&#305;lamad&#305;!</AlertText2>
+		<AppRestart>Parametre ayarlar&#305; sunucuya gonderildi, ayarlar&#305;n aktif olmas&#305; i&#231;in uygulamay&#305; yeniden ba&#351;latmak istiyor musunuz?</AppRestart>
+		<AppText1>Uygulama 25 saniye i&#231;inde yeniden ba&#351;lat&#305;lacak ve sayfa otomatik olarak yenilenecek</AppText1>
+		<AppText2>Uygulama yeniden ba&#351;lat&#305;lamad&#305;!</AppText2>
+		<Refresh>Parametre ayarlar&#305; sunucuya gonderildi, yeni de&#287;erler 5 saniye i&#231;inde sunucudan y&#252;klenecek</Refresh>
+		<Ipv4>L&#252;tfen do&#287;ru bir IP adresi girin (XXX.XXX.XXX.XXX)</Ipv4>
+		<FloatChck>L&#252;tfen ondal&#305;kl&#305; bir say&#305; girin</FloatChck>
+		<Greater>L&#252;tfen ilk de&#287;erden b&#252;y&#252;k bir de&#287;er giriniz.</Greater>
+		<Lesser>L&#252;tfen ilk de&#287;erden k&#252;&#231;&#252;k bir de&#287;er giriniz.</Lesser>
+		<GreaterOrEq>L&#252;tfen ilk de&#287;erden b&#252;y&#252;k veya e&#351;it bir de&#287;er giriniz.</GreaterOrEq>
+		<LessOrEq>L&#252;tfen ilk de&#287;erden k&#252;&#231;&#252;k veya e&#351;it bir de&#287;er giriniz.</LessOrEq>
+		<NonEmpty>Bu alan bo&#351; b&#305;rak&#305;lamaz.</NonEmpty>
+		<RangeChck>L&#252;tfen {0} ve {1} aral&#305;&#287;&#305;nda bir say&#305; giriniz</RangeChck>
+		<MaxChck>L&#252;tfen {0} say&#305;s&#305;ndan k&#252;&#231;&#252;k veya e&#351;it bir de&#287;er giriniz.</MaxChck>
+		<MinChck>L&#252;tfen {0} say&#305;s&#305;ndan b&#252;y&#252;k veya e&#351;it bir de&#287;er giriniz.</MinChck>
+		<NumChck>L&#252;tfen bir say&#305; girin.</NumChck>
+		<RangeLen>L&#252;tfen karakter uzunlu&#287;u {0} ve {1} aras&#305;nda metin giriniz.</RangeLen>
+		<DigitChck>L&#252;tfen sadece rakam girin.</DigitChck>
+		<MaxLen>L&#252;tfen en &#231;ok {0} karakter giriniz.</MaxLen>
+		<MinLen>L&#252;tfen en az {0} karakter giriniz.</MinLen>
+		<RemoteChck>L&#252;tfen ge&#231;erli bir de&#287;er girin.</RemoteChck>
+		<EmptyTable>Tabloda &#351;u an veri yok</EmptyTable>
+	</Javascript>
+</Root>
